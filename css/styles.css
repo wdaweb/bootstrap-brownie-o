@@ -1,0 +1,293 @@
+@charset "UTF-8";
+#section01,
+#section02 {
+  position: relative;
+  z-index: 500;
+}
+
+body {
+  background: #212529;
+}
+
+.mouse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 501;
+  pointer-events: none;
+}
+
+line {
+  stroke: rgba(214, 38, 38, 0.5);
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke-opacity: 0.5;
+  pointer-events: none;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  display: none;
+  color: white;
+  opacity: 0.8;
+}
+.swiper .swiper-button-prev {
+  left: 1rem;
+}
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  display: block;
+}
+
+#navbar {
+  font-size: 14px;
+  height: 130px;
+  margin-left: 0;
+  margin-right: 0;
+}
+#navbar .row {
+  width: calc(100vw - 17px);
+}
+#navbar .navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+#navbar .col {
+  align-items: center;
+}
+#navbar .dropdown-menu {
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
+@media (min-width: 992px) {
+  #navbar {
+    top: 30px;
+    margin: auto;
+    position: fixed;
+  }
+  #navbar .row {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #mainMenuBody {
+    height: 100%;
+  }
+}
+#mainMenuBody .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: rgb(214, 38, 38);
+  transition: ease 0.3s;
+}
+#mainMenuBody .nav-link {
+  height: 100% !important;
+}
+
+.nav-link-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#searchBar {
+  background: #212529;
+}
+
+.modal-body {
+  background: #212529;
+  z-index: 2;
+}
+
+#rightOffcanvas > a {
+  padding-right: 3%;
+}
+#rightOffcanvas > a .bi-twitter:hover,
+#rightOffcanvas > a .bi-instagram:hover {
+  fill: rgb(214, 38, 38);
+}
+
+.skewbox {
+  padding: 15px 30px;
+  /* 發光外框 */
+}
+.skewbox ::before {
+  content: "";
+  position: absolute;
+  transform: skewX(-10deg);
+  border: 3px solid #1e2128;
+  transition: ease 0.4s;
+}
+.skewbox ::after {
+  /* 發光線線 */
+  content: "";
+  position: absolute;
+  background: #f8f9fa;
+  display: block;
+  width: 20px;
+  height: 100%;
+  left: -30%;
+  top: -5%;
+  opacity: 0.7;
+  transform: skewX(10deg);
+  transition: ease 1s;
+}
+
+#swiper01 {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+#swiper01 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#swiper01 .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+#swiper01 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: rgb(214, 38, 38);
+  opacity: 0.6;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+#section01 {
+  margin-top: 100vh;
+  z-index: 2;
+}
+#section01 .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#section01 .popup-youtube {
+  display: flex;
+  height: 30vh;
+}
+#section01 .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+#section01 #swiper02 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30vh;
+  justify-content: center;
+}
+#section01 #swiper02 img:hover {
+  transform: scale(1.2);
+}
+@media (min-width: 576px) {
+  #section01 #swiper02 img {
+    height: 25vh;
+  }
+}
+@media (min-width: 1200px) {
+  #section01 #swiper02 img {
+    height: 30vh;
+  }
+}
+
+#section02 .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#section02 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+#section02 .player::after {
+  content: "";
+  position: absolute;
+  height: 40%;
+  top: 55%;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(214, 38, 38, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+}
+@media (min-width: 576px) {
+  #section02 .player::after {
+    top: 45%;
+  }
+}
+#section02 .playerInfo {
+  position: relative;
+  top: 70%;
+  color: white;
+  text-align: center;
+}
+#section02 .swiper-button-prev,
+#section02 .swiper-button-next {
+  opacity: 0.3;
+}
+
+#footer {
+  height: 40vh;
+  color: white;
+  margin-top: 6%;
+  background: rgba(0, 0, 0, 0.5);
+  background-position: center;
+}
+#footer .row {
+  width: 100%;
+  padding: 1rem;
+}
+#footer .col {
+  padding: 1rem;
+}
+#footer .icons a {
+  margin-right: 20px;
+  color: rgb(200, 202, 207);
+}
+#footer .icons a svg {
+  margin: 10px 15px;
+}
+#footer .icons a::before {
+  content: "";
+  position: absolute;
+  transform: skewX(-10deg);
+  background: rgb(214, 38, 38);
+  width: 50px;
+  height: 40px;
+  z-index: -1;
+}
+#footer .links a {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: rgb(200, 202, 207);
+}
+#footer .links a:hover {
+  color: rgb(214, 38, 38);
+}
+#footer p {
+  color: rgb(200, 202, 207);
+}

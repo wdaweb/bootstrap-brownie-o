@@ -1,0 +1,40 @@
+#section02 {
+  // top: 100vh;
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+  }
+
+  .player::after {
+    content: '';
+    position: absolute;
+    height: 40%;
+    top: 55%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(214, 38, 38, 0.5) 30%, rgba(255, 255, 255, 0) 100%);
+    @include sm{
+      top: 45%;
+    }
+  }
+
+  .playerInfo {
+    position: relative;
+    top: 70%;
+    color: white;
+    text-align: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0.3;
+  }
+}

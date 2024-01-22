@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- google font -->
+  <!-- font-family: 'Overpass', sans-serif; -->
+  <!-- font-family: 'Anton', sans-serif; -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- bs -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- bs icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- lightbox -->
+  <link rel="stylesheet" href="./css/magnific-popup.css">
+  <!-- video - lightbox -->
+  <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
+</head>
+
+
+
+<body>
+  <!-- https://crazyraccoon.jp/ -->
+  <!-- https://demo.templatemonster.com/demo/246496.html -->
+  <svg class="mouse">
+  </svg>
+
+  <!-- header -->
+  <div id="navbar" class="navbar-dark container position-relative">
+    <div class="row text-bg-dark">
+      <!-- logo 1 -->
+      <div class="col-auto d-lg-none d-flex justify-content-center me-auto">
+        <a class="navbar-brand" href="#">
+          <img src="./img/cr_logo.svg" alt="Logo" width="100" class="d-inline-block align-text-top">
+        </a>
+      </div>
+      <!-- main menu -->
+      <div class="col-auto col-lg-5 text-dark text-center ps-5 d-flex navbar-expand-lg justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100 p-0">
+          <div class="container h-100 p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu">
+              <span class="navbar-toggler-icon" data-bs-target="#mainMenu"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" data-bs-hideresize="true" tabindex="-1" id="mainMenu"
+              style="visibility: hidden; height: 100% !important;">
+              <div class="offcanvas-header d-flex d-lg-none justify-content-center">
+                <h5 class="offcanvas-title">
+                  <img src="./img/cr_logo.svg">
+                </h5>
+              </div>
+              <div class="offcanvas-body h-100">
+                <ul id="mainMenuBody" class="navbar-nav justify-content-end flex-grow-1">
+                  <li class="col nav-item dropdown text-center">
+                    <a class="nav-link nav-link-centered" data-bs-toggle="dropdown" href="#" role="button">ABOUT</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">CR FES</a></li>
+                      <li><a class="dropdown-item" href="#">CR CUP</a></li>
+                      <li><a class="dropdown-item" href="#">CR Gamging School</a></li>
+                      <li><a class="dropdown-item" href="#">Team Reach</a></li>
+                      <li><a class="dropdown-item" href="#">Company</a></li>
+                    </ul>
+                  </li>
+                  <li class="col nav-item dropdown">
+                    <a class="nav-link nav-link-centered" data-bs-toggle="dropdown" href="#" role="button">MEMBER</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Apex Legend</a></li>
+                      <li><a class="dropdown-item" href="#">Brawl Stars</a></li>
+                      <li><a class="dropdown-item" href="#">Clash Royale</a></li>
+                      <li><a class="dropdown-item" href="#">Fortnite</a></li>
+                      <li><a class="dropdown-item" href="#">Valorant</a></li>
+                      <li><a class="dropdown-item" href="#">SuperSmashBros</a></li>
+                      <li><a class="dropdown-item" href="#">Street Fighter</a></li>
+                      <li><a class="dropdown-item" href="#">Streamer</a></li>
+                    </ul>
+                  </li>
+                  <li class="col nav-item">
+                    <a class="nav-link nav-link-centered" href="#">NEWS</a>
+                  </li>
+                  <li class="col nav-item dropdown">
+                    <a class="nav-link nav-link-centered" data-bs-toggle="dropdown" href="#" role="button">STORE</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Online Store</a></li>
+                      <li><a class="dropdown-item" href="#">CR Gaming Space</a></li>
+                      <li><a class="dropdown-item" href="#">CR Store</a></li>
+                    </ul>
+                  </li>
+                  <li class="col nav-item">
+                    <a class="nav-link nav-link-centered" href="#">CRCUP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- logo-center -->
+      <div class="col-auto col-lg-2 d-lg-flex justify-content-center me-auto d-none">
+        <a class="navbar-brand" href="#">
+          <img src="./img/cr_logo.svg" alt="Logo" width="100" class="d-inline-block align-text-top">
+        </a>
+      </div>
+      <!-- right navbar -->
+      <div class="col col-lg-5 d-none d-lg-flex">
+        <div class="col col-lg-7">
+          <a class="skewbox position-relative" href="https://twitter.com/crazyraccoon406">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+            </svg>
+            <span>CR Twitter</span>
+          </a>
+        </div>
+        <div class="col-auto col-lg-5 d-flex">
+          <div class="row text-center">
+            <div class="col p-0">
+              <div class="btn-group">
+                <button class="btn text-bg-dark border-0" type="button" data-bs-toggle="dropdown"
+                  data-bs-offset="10,49">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-globe2" viewBox="0 0 16 16">
+                    <path
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Japanese</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Korean</a></li>
+                  <li><a class="dropdown-item" href="#">Chinese</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col p-0">
+              <button type="button" class="btn text-bg-dark border-0" data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+              </button>
+            </div>
+            <div class="col px-0 pt-1">
+              <!-- https://getbootstrap.com/docs/5.3/components/offcanvas/ -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon position-relative"></span>
+              </button>
+            </div>
+            </ul>
+          </div>
+          <div class="modal fade" id="searchModal" tabindex="-1">
+            <!-- <div class="modal-dialog modal-fullscreen modal-dialog-centered"> -->
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                  <form id="searchBar" class="d-flex b-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="What are you looking for"
+                      style="background-color: #212529; border: none;">
+                    <button class="btn btn-dark" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right offcanvas -->
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                <img src="./img/cr_logo.svg" width="64">
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div id="rightOffcanvas" class="offcanvas-body">
+              <p>
+                『Crazy Raccoon』は2018年4月に結成したチームで、『ゲーマーをかっこよく魅せる』というテーマを掲げ、esportsの発展を目的として精力的に活動を行っています。
+              </p>
+              <a href="https://twitter.com/crazyraccoon406">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/crazy_raccoon_official/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/channel/UCV3h-YCXiKiMmVupdknm73Q">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                </svg>
+              </a>
+              <a href="https://crazyraccoon-store.com/">
+
+              </a>
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- carousel - swiper -->
+  <div class="swiper" id="swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./img/CR_FC_wallpaper12.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/CRCUP_wallpaper_2401.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/202205_CR.png">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/202304.jpg">
+      </div>
+      <!-- 分頁標籤 -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- video swiper & lightbox -->
+  <section id="section01">
+    <div class="container">
+      <div class="swiper" id="swiper02">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <!-- 燈箱效果 -->
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=Y7W4EL5kqzA">
+              <img src="./img/Y7W4EL5kqzA-fullhd.jpg">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=tN6VLMPYOAE">
+              <img src="./img/tN6VLMPYOAE-fullhd.jpg">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=_0Hbm-WQOl8">
+              <img src="./img/_0Hbm-WQOl8-fullhd.jpg">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="popup-youtube" href="https://www.youtube.com/watch?v=U-2jQV0R94k">
+              <img src="./img/U-2jQV0R94k-fullhd.jpg">
+            </a>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- players swiper -->
+  <section id="section02">
+    <div class="container">
+      <div class="title">
+        <h1>MEMBERS</h1>
+      </div>
+      <div class="swiper" id="swiper03">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_neth.png">
+            </div>
+            <div class="playerInfo">
+              <span>VALO</span>
+              <h3>neth</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/Meiy.png">
+            </div>
+            <div class="playerInfo">
+              <span>VALO</span>
+              <h3>Meiy</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/Popo.png">
+            </div>
+            <div class="playerInfo">
+              <span>VALO</span>
+              <h3>popogachi</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Astell.png">
+            </div>
+            <div class="playerInfo">
+              <span>VALO</span>
+              <h3>Astell</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Twinkl.png">
+            </div>
+            <div class="playerInfo">
+              <span>VALO</span>
+              <h3>Twinkl</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Arisakaaa.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Arisakaaa</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Daruma.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Daruma</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Francisco.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Francisco</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Kinako.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Kinakio</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Ras.png">
+            </div>
+            <div class="playerInfo">
+              <span>APEX</span>
+              <h3>Ras</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Cpt.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Cpt</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Mondo.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Mondo</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Selly.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Selly</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Zeder.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Zeder</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Rion.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Rion</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Sushimasu.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Sushimasu</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Vanilla.png">
+            </div>
+            <div class="playerInfo">
+              <span>Streamer</span>
+              <h3>Vanilla</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/HP_選手画像_Wokka.png">
+            </div>
+            <div class="playerInfo">
+              <span>Steamer</span>
+              <h3>Wokka</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/JungHeeHP.png">
+            </div>
+            <div class="playerInfo">
+              <span>APEX</span>
+              <h3>JungHee</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/JusnaHP.png">
+            </div>
+            <div class="playerInfo">
+              <span>APEX</span>
+              <h3>Jusna</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/DogmaHP.png">
+            </div>
+            <div class="playerInfo">
+              <span>APEX</span>
+              <h3>Dogma</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="player">
+              <img src="./img/ManDiHP.png">
+            </div>
+            <div class="playerInfo">
+              <span>APEX</span>
+              <h3>ManDi</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+  </section>
+
+  <!-- <div class="l-deco">
+    <span class="deco_moveline -l"></span>
+    <span class="deco_moveline -c"></span>
+    <span class="deco_moveline -r"></span>
+  </div> -->
+
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 icons">
+          <h4>ABOUT US</h4>
+          <p>
+            所属選手は全員日本トップレベルの実力を誇り、世界で戦っているメンバーも多く所属しています。
+            TwitterやYouTubeの登録者数はチーム全体で2千万人を超えており、『CR CUP』を始めとする様々なイベントや大会にも携わっております。
+          </p>
+          <a href="https://twitter.com/crazyraccoon406">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                </svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCV3h-YCXiKiMmVupdknm73Q">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class= "bi bi-youtube"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                </svg>
+          </a>
+          <a href="https://www.instagram.com/crazy_raccoon_official/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                </svg>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 links">
+          <h4>CATEGORIES</h4>
+          <a href="#"><i class="bi bi-arrow-right"></i> FPS</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> RPG</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Horror</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Fantasy</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Nitendo</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 links">
+          <h4>NEED HELP?</h4>
+          <a href="#"><i class="bi bi-arrow-right"></i> Company</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> For the fans</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Press</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Privacy</a><br>
+          <a href="#"><i class="bi bi-arrow-right"></i> Policy</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h4>CONTACT US</h4>
+          <p>
+            <i class="bi bi-geo-alt"></i>
+            東京都渋谷区神南1-18-2 フレーム神南坂 CRAZY RACCOON STORE  〒150-0041
+          </p>
+          <p>
+            <i class="bi bi-telephone"></i>
+            (888)-659-252561
+          </p>
+          <p>
+            <i class="bi bi-building"></i>
+            (888)-123-45678
+          </p>
+          <p>
+            <i class="bi bi-envelope-open"></i>
+            CrazyRaccoon@email.com
+          </p>
+          <p>
+            <i class="bi bi-globe"></i>
+            https://crazyraccoon.jp/
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./JS/bootstrap.bundle.js"></script>
+<!-- JQ -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+  integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
+  crossorigin='anonymous'></script>
+<!-- swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- lightbox -->
+<script src="./JS/jquery.magnific-popup.js"></script>
+<!-- shouldStopExecution -->
+<script src="./JS/shouldStopExecution.js"></script>
+<!-- gsap -->
+<script src="./JS/gsap/gsap.js"></script>
+<!-- self -->
+<script src="./JS/all.js"></script>
+<script>
+
+</script>
+
+</html>

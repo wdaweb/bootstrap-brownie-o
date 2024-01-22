@@ -1,0 +1,42 @@
+#section01 {
+  margin-top: 100vh;
+  z-index: 2;
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .popup-youtube {
+    display: flex;
+    height: 30vh;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+  }
+
+  #swiper02 {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      height: 30vh;
+      justify-content: center;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @include sm {
+        height: 25vh;
+      }
+
+      @include xl {
+        height: 30vh;
+      }
+    }
+  }
+}
