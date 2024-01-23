@@ -9,8 +9,8 @@
 1. gsap: 首頁滑鼠游標 mouse-follow-effect  
   https://gsap.com/community/forums/topic/34731-mouse-follow-effect/
 
-2. swiper: #swiper01, #section01, #section02
+2. swiper: #swiper01, #section01, #section02  
   https://swiperjs.com/get-started  
 
-3. lightbox: #section01 .popup-youtube
+3. lightbox: #section01 .popup-youtube  
   https://github.com/dimsemenov/Magnific-Popup  
